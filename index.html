@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Library</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="resources/logo.png" alt="Logo" aria-label="Movie Library Logo">
+      </div>
+      <div class="nav-links">
+        <a href="#">HOME</a>
+        <a href="#">OUR SCREENS</a>
+        <a href="#">SCHEDULE</a>
+        <a href="#movie-library">MOVIE LIBRARY</a>
+        <a href="#contact">LOCATION & CONTACT</a>
+      </div>
+      <button class="hamburger-menu" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Main Visual (Slideshow) -->
+    <section class="main-visual">
+      <div class="slide">
+        <img src="resources/banner.png" alt="Slide 1" aria-label="Main Visual Slide 1">
+      </div>
+      <div class="slide">
+        <img src="resources/banner1.png" alt="Slide 2" aria-label="Main Visual Slide 2">
+      </div>
+      <div class="slide">
+        <img src="resources/banner2.png" alt="Slide 3" aria-label="Main Visual Slide 3">
+      </div>
+    </section>
+
+    <!-- Site Introduction -->
+    <section class="intro">
+      <h1>Movie Library</h1>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+    </section>
+
+    <!-- Collect your favorites -->
+    <section class="movie-grid" id="movie-library">
+      <div class="movie-grid-container">
+        <h2 class="grid-title">Collect your Favourites</h2>
+        <div class="search-movies">
+          <input type="text" placeholder="Search title and add to grid" aria-label="Search movies">
+        </div>
+      </div>
+      <div class="added-shows"></div>
+      <hr>
+      <div class="movies">
+        <!-- Static movie items -->
+        <div class="movie-item">
+          <img src="resources/batman.png" alt="Batman Returns" aria-label="Batman Returns movie poster">
+          <h3>Batman Returns</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut...</p>
+          <button class="remove-button" aria-label="Remove Batman Returns from grid">X</button>
+        </div>
+        <div class="movie-item">
+          <img src="resources/horse.png" alt="Wild Wild West" aria-label="Wild Wild West movie poster">
+          <h3>Wild Wild West</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut...</p>
+          <button class="remove-button" aria-label="Remove Wild Wild West from grid">X</button>
+        </div>
+        <div class="movie-item">
+          <img src="resources/spiderman.png" alt="The Amazing Spiderman" aria-label="The Amazing Spiderman movie poster">
+          <h3>The Amazing Spiderman</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut...</p>
+          <button class="remove-button" aria-label="Remove The Amazing Spiderman from grid">X</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="contact" id="contact">
+      <h2>How to reach us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      <div class="contact-container">
+        <form id="contact-form" method="POST" action="submit.php">
+          <div class="form-group name-group">
+            <div>
+              <label for="firstName">First Name*</label>
+              <input style="width: 97%;" type="text" id="firstName" name="firstName" aria-required="true">
+            </div>
+            <div>
+              <label for="lastName">Last Name*</label>
+              <input type="text" id="lastName" name="lastName" aria-required="true">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email"  aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="telephone">Telephone</label>
+            <input type="tel" id="telephone" name="telephone">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+            <p>required fields*</p>
+          </div>
+          <div class="form-group">
+            <input style="width: 10px;" type="checkbox" id="termsConditions" name="termsConditions" aria-required="true">
+            <label for="termsConditions">I agree to the Terms & Conditions</label>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        <div id="thank-you-message" aria-live="polite"></div>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.3807403172596!2d79.940426!3d6.8448775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25069caa2f53b%3A0xe7eae3a8b1f1214d!2seBEYONDS%20eBusiness%20%26%20Digital%20Solutions!5e0!3m2!1sen!2slk!4v1711018757614!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Maps Location"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-info">
+      <div>
+        <p>IT Group</p>
+        <p>C. Salvador de Madariaga 1</p>
+        <p>28027 Madrid, Spain</p>
+      </div>
+      <div>
+        <p>Follow us on <a href="#"><img src="resources/twitter.png" alt="Twitter" aria-label="Twitter"></a> <a href="#"><img src="resources/youtube.png" alt="YouTube" aria-label="YouTube"></a></p>
+      </div>
+    </div>
+    <hr>
+    <div class="copywright">
+      <p>Copyright &copy; 2022 IT Hotels. All rights reserved.</p>
+      <p>Photos by Felix Mooneeram & Serge Kutuzov on Unsplash</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
